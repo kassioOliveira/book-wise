@@ -1,2 +1,2 @@
 
-export {default} from './Home/index.page'
+export {default} from './home/index.page'
