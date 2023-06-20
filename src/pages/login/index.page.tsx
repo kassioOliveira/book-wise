@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Container, LinksContainer } from './styles'
 
-import loginImgagePage from '../../assets/login.page.png'
+import loginImagePage from '../../assets/login.page.png'
 import Link from 'next/link'
 
 import { LuRocket } from 'react-icons/lu'
@@ -11,7 +11,7 @@ import { FaGithub } from 'react-icons/fa'
 export default function Login() {
   return (
     <Container>
-      <Image src={loginImgagePage} alt="" />
+      <Image src={loginImagePage} alt="" />
       <LinksContainer>
         <div>
           <Link href="#">
