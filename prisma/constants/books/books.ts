@@ -1,19 +1,3 @@
-import ARevolucaoDosBichos from './assets/Book.png'
-import ArquiteturaLimpa from './assets/arquitetura-limpa.png'
-import CodigoLimpo from './assets/codigo-limpo.png'
-import EntendendoAlgoritmos from './assets/entendendo-algoritmos.png'
-import FragmentosDoHorror from './assets/fragmentos-do-horror.png'
-import OfimDaEternidade from './assets/o-fim-da-eternidade.png'
-import OHobbit from './assets/o-hobbit.png'
-import ViagemAoCentroDaTerra from './assets/viagem-ao-centro-da-terra.png'
-import OGuiaDoMochileiroDaGalaxia from './assets/o-guia-do-mochileiro-das-galaxias.png'
-import DomainDrivenDesign from './assets/domain-driven-design.png'
-import OProgramadorPragmatico from './assets/o-programador-pragmatico.png'
-import OPoderDoHabito from './assets/o-poder-do-habito.png'
-import HabitosDeDesenvolvedoresAltamenteProdutivos from './assets/14-habitos-de-desenvolvedores-altamente-produtivos.png'
-import Refatoracao from './assets/refatoracao.png'
-import HistoriasExtraordinarias from './assets/historias-extraordinarias.png'
-
 export const books = [
   {
     id: '1',
@@ -21,15 +5,15 @@ export const books = [
     name: 'A Revolução Dos Bichos',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(ARevolucaoDosBichos),
+    cover_url: './assets/Book.png',
     total_pages: 200,
     categories: [
       {
-        id: 3,
+        id: '3',
         name: 'Fantasia',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
     ],
@@ -40,15 +24,15 @@ export const books = [
     name: 'Arquitetura Limpa',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(ArquiteturaLimpa),
+    cover_url: './assets/arquitetura-limpa.png',
     total_pages: 200,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -59,15 +43,15 @@ export const books = [
     name: 'Código Limpo',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(CodigoLimpo),
+    cover_url: './assets/codigo-limpo.png',
     total_pages: 230,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -78,15 +62,15 @@ export const books = [
     name: 'Entendendo Algoritmos',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(EntendendoAlgoritmos),
+    cover_url: './assets/entendendo-algoritmos.png',
     total_pages: 375,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -97,11 +81,11 @@ export const books = [
     name: 'Fragmentos Do Horror',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(FragmentosDoHorror),
+    cover_url: './assets/fragmentos-do-horror.png',
     total_pages: 248,
     categories: [
       {
-        id: 5,
+        id: '5',
         name: 'Horror',
       },
     ],
@@ -112,15 +96,15 @@ export const books = [
     name: 'O Fim Da Eternidade',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(OfimDaEternidade),
+    cover_url: './assets/o-fim-da-eternidade.png',
     total_pages: 340,
     categories: [
       {
-        id: 6,
+        id: '6',
         name: 'HQs',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
     ],
@@ -131,15 +115,15 @@ export const books = [
     name: 'O Hobbit',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(OHobbit),
+    cover_url: './assets/o-hobbit.png',
     total_pages: 340,
     categories: [
       {
-        id: 3,
+        id: '3',
         name: 'Fantasia',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
     ],
@@ -150,19 +134,19 @@ export const books = [
     name: 'Viagem ao Centro da Terra',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(ViagemAoCentroDaTerra),
+    cover_url: './assets/viagem-ao-centro-da-terra.png',
     total_pages: 340,
     categories: [
       {
-        id: 3,
+        id: '3',
         name: 'Fantasia',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
       {
-        id: 4,
+        id: '4',
         name: 'Ficção científica',
       },
     ],
@@ -173,19 +157,19 @@ export const books = [
     name: 'O Guia Do Mochileiro Da Galaxia',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(OGuiaDoMochileiroDaGalaxia),
+    cover_url: './assets/o-guia-do-mochileiro-das-galaxias.png',
     total_pages: 372,
     categories: [
       {
-        id: 3,
+        id: '3',
         name: 'Fantasia',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
       {
-        id: 4,
+        id: '4',
         name: 'Ficção científica',
       },
     ],
@@ -196,15 +180,15 @@ export const books = [
     name: 'Domain-Driven Design',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(DomainDrivenDesign),
+    cover_url: './assets/domain-driven-design.png',
     total_pages: 340,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -215,15 +199,15 @@ export const books = [
     name: 'O Programador Pragmático',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(OProgramadorPragmatico),
+    cover_url: './assets/o-programador-pragmatico.png',
     total_pages: 357,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -235,11 +219,11 @@ export const books = [
     name: 'O Poder do Hábito',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(OPoderDoHabito),
+    cover_url: './assets/o-poder-do-habito.png',
     total_pages: 357,
     categories: [
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -250,15 +234,16 @@ export const books = [
     name: '14 Hábitos de Desenvolvedores Altamente Produtivos',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(HabitosDeDesenvolvedoresAltamenteProdutivos),
+    cover_url:
+      './assets/14-habitos-de-desenvolvedores-altamente-produtivos.png',
     total_pages: 334,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -269,15 +254,15 @@ export const books = [
     name: 'Refatoração',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(Refatoracao),
+    cover_url: './assets/refatoracao.png',
     total_pages: 374,
     categories: [
       {
-        id: 1,
+        id: '1',
         name: 'Computação',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Educação',
       },
     ],
@@ -288,15 +273,15 @@ export const books = [
     name: 'Histórias Extraordinárias',
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    cover_url: String(HistoriasExtraordinarias),
+    cover_url: './assets/historias-extraordinarias.png',
     total_pages: 374,
     categories: [
       {
-        id: 3,
+        id: '3',
         name: 'Fantasia',
       },
       {
-        id: 7,
+        id: '7',
         name: 'Suspense',
       },
     ],
