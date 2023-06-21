@@ -15,16 +15,17 @@ export const LinksContainer = styled('div', {
     flexDirection: 'column',
     gap: '$8',
 
-    a: {
+    button: {
       color: '$gray100',
       fontSize: '$2xl',
       textDecoration: 'none',
       backgroundColor: '$gray500',
       padding: '$6 $10',
       borderRadius: '$md',
+      cursor: 'pointer',
     },
 
-    'a:nth-child(3)': {
+    'button:nth-child(3)': {
       svg: {
         color: '$purple100',
       },

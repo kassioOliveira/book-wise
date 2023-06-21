@@ -1,13 +1,11 @@
-import { styled } from '@/styles/stitches.config'
-
-const Container = styled('div', {
-  color: '$gray300',
-})
+import { signOut, useSession } from 'next-auth/react'
 
 export default function Home() {
+  const { data } = useSession()
   return (
-    <Container>
-      <h1>Hello</h1>
-    </Container>
+    <pre>
+      {JSON.stringify(data, null, 2)}
+      <button onClick={() => signOut()}>deslogar</button>
+    </pre>
   )
 }
