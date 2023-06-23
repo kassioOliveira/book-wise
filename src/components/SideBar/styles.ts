@@ -28,7 +28,7 @@ export const Container = styled('div', {
     gap: 5,
 
     svg: {
-      color: '$purple100',
+      color: '$green100',
     },
   },
 })

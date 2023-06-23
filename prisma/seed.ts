@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client'
-import { books } from './constants/books/books'
-import { categories } from './constants/categories/categories'
-import { ratings } from './constants/ratings/ratings'
-import { users } from './constants/users/users'
+import { books } from './constants/books'
+import { categories } from './constants/categories'
+import { ratings } from './constants/ratings'
+import { users } from './constants/users'
 
 const prisma = new PrismaClient()
 

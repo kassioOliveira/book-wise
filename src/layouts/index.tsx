@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Container, Content } from './styles'
-import { SideBar } from '@/components/SideBar'
+import { SideBar } from '../components/SideBar'
 
 interface DefaultLayoutProps {
   children: ReactNode
