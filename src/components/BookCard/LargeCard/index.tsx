@@ -12,8 +12,6 @@ import Image from 'next/image'
 
 import { Rating, User, Book } from '@prisma/client'
 
-// import { Blob, BlobOptions } from 'buffer'
-
 type BookRatingsWIthUser = Rating & {
   book: Book
   user: User
@@ -23,17 +21,12 @@ interface BookRating {
   rating: BookRatingsWIthUser
 }
 
-// const fileReader = new FileReader()
-
-// console.log(fileReader.readAsDataURL(bookImage.blurDataURL))
-
 export function LargeCard({ rating }: BookRating) {
   const validStars = useMemo(() => {
     return [1, 2, 3, 4, 0].sort().reverse()
   }, [])
 
   const { book } = rating
-  console.log(book?.cover_url)
   return (
     <Container>
       <CardHeader>

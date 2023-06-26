@@ -19,7 +19,6 @@ export function BookRatings() {
     },
   })
 
-  console.log(data?.data)
   return (
     <Container>
       {data?.data &&

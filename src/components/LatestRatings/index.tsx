@@ -1,14 +1,13 @@
-import { useQuery } from '@tanstack/react-query'
+// import { useQuery } from '@tanstack/react-query'
 
 import { Container } from './styles'
 import { BsGraphUpArrow } from 'react-icons/bs'
 
 export function LatestRatings() {
-  const { data } = useQuery({
-    queryKey: ['last-ratings'],
-    queryFn: () => [],
-  })
-  console.log(data)
+  // const { data } = useQuery({
+  //   queryKey: ['last-ratings'],
+  //   queryFn: () => [],
+  // })
   return (
     <Container>
       <h1>
