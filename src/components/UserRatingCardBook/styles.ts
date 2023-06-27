@@ -17,6 +17,12 @@ export const CardHeader = styled('header', {
   width: '95%',
   margin: '0 auto',
   marginTop: '$5',
+
+  'div:nth-child(2)': {
+    '> span:nth-child(2)': {
+      color: '$gray400',
+    },
+  },
 })
 
 export const Content = styled('main', {
@@ -34,12 +40,12 @@ export const Summary = styled('div', {
 
   '> div': {
     '> h3': {
-      textTransform: 'uppercase',
+      color: '$gray100',
     },
     '> span': {
       fontSize: '$md',
-      color: '$gray300',
-      textTransform: 'uppercase',
+
+      color: '$gray400',
     },
   },
 
@@ -66,8 +72,11 @@ export const TextSummary = styled('p', {
         '-webkit-box-orient': ' vertical',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+        color: '$gray300',
       },
-      large: {},
+      large: {
+        color: '$gray300',
+      },
     },
   },
 })

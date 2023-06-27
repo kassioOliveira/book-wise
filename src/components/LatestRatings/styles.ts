@@ -12,6 +12,7 @@ export const Container = styled('div', {
 
   '> h2': {
     marginTop: '$5',
+    fontSize: '$md',
   },
 })
 
