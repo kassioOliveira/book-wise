@@ -3,14 +3,16 @@ import { NextPageWithLayout } from '../_app.page'
 import { ReactElement } from 'react'
 import { DefaultLayout } from '@/layouts'
 import { LatestRatings } from '@/components/LatestRatings'
-import { BookRatings } from '@/components/BookRatings'
+
+import { HomeContainer } from './styles'
+import PopularBooks from '@/components/PopularBooks'
 
 const HomePage: NextPageWithLayout = () => {
   return (
-    <div>
+    <HomeContainer>
       <LatestRatings />
-      <BookRatings />
-    </div>
+      <PopularBooks />
+    </HomeContainer>
   )
 }
 

@@ -13,4 +13,5 @@ export const Content = styled('main', {
   maxWidth: 996,
   margin: '0 auto',
   paddingTop: 72,
+  overflowY: 'auto',
 })

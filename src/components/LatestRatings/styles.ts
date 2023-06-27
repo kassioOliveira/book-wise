@@ -1,6 +1,6 @@
 import { styled } from '@/styles/stitches.config'
 
-export const Container = styled('section', {
+export const Container = styled('div', {
   '> h1': {
     display: 'flex',
     gap: 10,
@@ -9,6 +9,16 @@ export const Container = styled('section', {
       color: '$green100',
     },
   },
+
+  '> h2': {
+    marginTop: '$5',
+  },
 })
 
-export const CardsContainer = styled('div', {})
+export const CardsContainer = styled('section', {
+  height: '100%',
+
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$2',
+})
