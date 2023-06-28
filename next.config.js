@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: false,
   pageExtensions: ['page.tsx', 'api.ts', 'api.tsx'],
   images: {
-    domains: ['images.unsplash.com'],
+    domains: [
+      'lh3.googleusercontent.com',
+      'avatars.githubusercontent.com',
+      'images.unsplash.com',
+    ],
   },
 }
 

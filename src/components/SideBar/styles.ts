@@ -19,16 +19,14 @@ export const Container = styled('div', {
     margin: '10px auto',
   },
 
-  '> a': {
-    fontSize: '$lg',
-    textDecoration: 'none',
-    color: '$gray100',
+  '> div': {
     display: 'flex',
     alignItems: 'center',
-    gap: 5,
+    justifyContent: 'center',
+    gap: '$3',
 
-    svg: {
-      color: '$green100',
+    '> span': {
+      fontSize: '$sm',
     },
   },
 })
@@ -44,6 +42,38 @@ export const NavContainer = styled('nav', {
     textDecoration: 'none',
     color: '$gray100',
     padding: 7,
-    borderLeft: '5px solid $purple100',
+    borderLeft: '5px solid transparent ',
+  },
+})
+
+export const ButtonAuthentication = styled('button', {
+  padding: '$2',
+  borderRadius: 8,
+  fontSize: '$lg',
+  color: '$gray100',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 5,
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  border: 'none',
+  outline: 'none',
+  '&:hover': {
+    backgroundColor: '$gray600',
+  },
+  variants: {
+    colors: {
+      green: {
+        svg: {
+          color: '$green100',
+        },
+      },
+      red: {
+        svg: {
+          color: 'red',
+        },
+      },
+    },
   },
 })

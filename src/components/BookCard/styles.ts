@@ -45,6 +45,12 @@ export const Container = styled('article', {
         },
       },
       small: {
+        border: ' 1px solid transparent',
+        '&:hover': {
+          border: ' 1px solid $green200',
+          transition: 'ease-out .5s all',
+        },
+        cursor: 'pointer',
         'div:first-child': {
           height: '130px',
           display: 'flex',
@@ -56,6 +62,7 @@ export const Container = styled('article', {
             gap: '$2',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            width: '60%',
           },
         },
       },
@@ -64,9 +71,8 @@ export const Container = styled('article', {
 })
 
 export const BookHeader = styled('header', {
-  width: '80%',
+  width: '100%',
   '> h3': {
-    width: '100$',
     fontSize: '$md',
     whiteSpace: 'nowrap',
     ' -webkit-line-clamp': 1,
