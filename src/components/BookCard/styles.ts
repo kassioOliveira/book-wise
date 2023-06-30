@@ -30,12 +30,15 @@ export const Container = styled('article', {
         justifyContent: 'center',
 
         '> div:first-child': {
-          height: '170px',
+          width: '95%',
+          height: '96%',
           display: 'flex',
           alignItems: 'center',
-          gap: '$3',
+          justifyContent: 'center',
+          gap: '$4',
 
           '> div': {
+            width: '50%',
             height: '90%',
             display: 'flex',
             gap: '$2',

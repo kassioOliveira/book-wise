@@ -2,12 +2,13 @@ import { ReactElement } from 'react'
 import { NextPageWithLayout } from '../_app.page'
 import { DefaultLayout } from '@/layouts'
 import { ExplorarContainer } from './styles'
-import { HeaderExplore } from '@/components/HeaderExplore'
+
+import { ExploreBooks } from '@/components/ExploreBooks'
 
 const ExplorarPage: NextPageWithLayout = () => {
   return (
     <ExplorarContainer>
-      <HeaderExplore />
+      <ExploreBooks />
     </ExplorarContainer>
   )
 }

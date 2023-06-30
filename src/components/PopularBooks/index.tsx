@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import BookCard from '../BookCard'
+import { BookCard } from '../BookCard'
 import { Container, ContainerBooks, TitleContainer } from './styles'
 import { RiArrowRightSLine } from 'react-icons/ri'
 import { useQuery } from '@tanstack/react-query'
