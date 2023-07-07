@@ -15,7 +15,6 @@ interface BookCardProps {
 export function BookCard({ size, book: { bookInfo, rating } }: BookCardProps) {
   const imgHeight = size === 'large' ? 130 : size === 'medium' ? 140 : 90
   const imgwidth = size === 'large' ? 98 : size === 'medium' ? 100 : 60
-  console.log(rating)
   return (
     <Container size={size}>
       <div>
