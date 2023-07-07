@@ -21,6 +21,7 @@ export type BookWithAvgRating = Book & {
 }
 
 export function ExploreBooks() {
+  const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   const { data } = useQuery<Category[]>(['categories'], async () => {
@@ -42,8 +43,16 @@ export function ExploreBooks() {
     },
   )
 
-  console.log(books)
-  console.log(data)
+  const handleSearch = (value: string) => {
+    setSearch(value)
+  }
+
+  const filteredBooks = books?.filter((book) => {
+    return (
+      book.name.toLowerCase().includes(search.toLowerCase()) ||
+      book.author.toLowerCase().includes(search.toLowerCase())
+    )
+  })
 
   return (
     <ExploreBookContainer>
@@ -54,7 +63,7 @@ export function ExploreBooks() {
             <h1>Explorar</h1>
           </TitleContainer>
 
-          <Search />
+          <Search searchValue={search} handleSearch={handleSearch} />
         </div>
         <CategoryContainer>
           <CategoryItem
@@ -82,8 +91,8 @@ export function ExploreBooks() {
         </CategoryContainer>
       </HeaderExploreContainer>
       <BooksContainer>
-        {books &&
-          books.map(({ alreadyRead, avgRating, ...bookInfo }) => {
+        {filteredBooks &&
+          filteredBooks.map(({ alreadyRead, avgRating, ...bookInfo }) => {
             return (
               <BookCard
                 key={bookInfo.id}

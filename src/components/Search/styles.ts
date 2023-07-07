@@ -16,7 +16,6 @@ export const SearchContainer = styled('div', {
   },
   '> svg': {
     color: '$gray400',
-    cursor: 'pointer',
   },
 })
 
