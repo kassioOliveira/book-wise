@@ -63,7 +63,11 @@ export function ExploreBooks() {
             <h1>Explorar</h1>
           </TitleContainer>
 
-          <Search searchValue={search} handleSearch={handleSearch} />
+          <Search
+            searchValue={search}
+            handleSearch={handleSearch}
+            placeholder="Buscar livro ou autor"
+          />
         </div>
         <CategoryContainer>
           <CategoryItem

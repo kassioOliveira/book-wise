@@ -9,14 +9,18 @@ export const Container = styled('article', {
       large: {
         'div:first-child': {
           width: '600px',
-          minHeight: '294px',
+          minHeight: '200px',
           display: 'flex',
-          justifyContent: 'space-evenly',
+          justifyContent: 'left',
           alignItems: 'center',
-          gap: '$2',
+          gap: '$4',
+          margin: '0 auto',
+          padding: '$3',
+
           '> div': {
             display: 'flex',
             gap: '$2',
+            minHeight: '130px',
             flexDirection: 'column',
             justifyContent: 'space-between',
           },
@@ -97,7 +101,11 @@ export const BookHeader = styled('header', {
 })
 
 export const SummaryBook = styled('div', {
-  width: '95%',
+  width: '600px',
   textAlign: 'left',
   margin: '$3 auto',
+  minHeight: '94px',
+  maxHeight: 'max-content',
+  padding: '$3',
+  color: '$gray300',
 })
