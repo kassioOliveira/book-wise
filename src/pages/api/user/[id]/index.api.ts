@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { getMostFrequent } from '@/utils/getMostFrequent'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handler(
@@ -39,13 +40,36 @@ export default async function handler(
           },
         },
       },
+      categories: {
+        where: {
+          book_id: {
+            in: userInfo?.ratings.map((rating) => rating.book_id),
+          },
+        },
+      },
     },
   })
+
+  const ratedBooksCategory = ratedBooks
+    .map((book) => book.categories.map((c) => c.categoryId))
+    .flat(1)
+
+  const category = await prisma.category.findMany({})
+
+  const filtedCategory = category.filter((c) =>
+    ratedBooksCategory.includes(c.id),
+  )
+
+  const categoryId = filtedCategory.map((category) => category.id)
+
+  const mostFrequent = getMostFrequent(categoryId)
+  const moreReadCategory = filtedCategory.filter((c) => c.id === mostFrequent)
 
   return res.json({
     userProfileInformation: {
       userInfo,
       ratedBooks,
+      moreReadCategory: moreReadCategory[0],
     },
   })
 }

@@ -4,7 +4,10 @@ import { DefaultLayout } from '@/layouts'
 import {
   BookContent,
   Container,
+  HeaderInformation,
   HeaderProfile,
+  InformationBox,
+  InformationContent,
   ProfileContainer,
   ProfileInformation,
   RatedBooks,
@@ -14,12 +17,19 @@ import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
 
-import { Book, User, Rating } from '@prisma/client'
+import { Book, User, Rating, Category, CategoriesOnBooks } from '@prisma/client'
 import { BookCard } from '@/components/BookCard'
 import { getFormattedDate } from '@/utils/getFomattedDate'
 import { Search } from '@/components/Search'
 
-import { PiUser } from 'react-icons/pi'
+import {
+  PiUser,
+  PiBooks,
+  PiBookOpenBold,
+  PiUserListFill,
+  PiBookmarkSimpleBold,
+} from 'react-icons/pi'
+import { Avatar } from '@/components/Avatar'
 
 type UserInfo = User & {
   ratings: Rating[]
@@ -30,11 +40,13 @@ type UserInfo = User & {
 
 type RatedBooksType = Book & {
   ratings: Rating[]
+  categories: CategoriesOnBooks[]
 }
 
 interface UserProfileInformationType {
   userInfo: UserInfo
   ratedBooks: RatedBooksType[]
+  moreReadCategory: Category
 }
 
 const ProfilePage: NextPageWithLayout = () => {
@@ -68,6 +80,24 @@ const ProfilePage: NextPageWithLayout = () => {
     )
   })
 
+  const pagesRead = data?.ratedBooks
+    .map((book) => book.total_pages)
+    .reduce((previus, current) => previus + current, 0)
+
+  const authourRead = data?.ratedBooks.map((book) => book.author)
+  const countAuthor = authourRead?.reduce(
+    (previus: string[], current: string) => {
+      if (!previus.includes(current)) {
+        previus.push(current)
+      }
+
+      return previus
+    },
+    [],
+  ).length
+
+  const ratedBooks = data?.userInfo.ratings.length
+
   return (
     <ProfileContainer>
       <Container>
@@ -100,7 +130,50 @@ const ProfilePage: NextPageWithLayout = () => {
             })}
         </RatedBooks>
       </Container>
-      <ProfileInformation>Profoile information</ProfileInformation>
+      <div>
+        <ProfileInformation>
+          <HeaderInformation>
+            <Avatar src={data?.userInfo.avatar_url} size="lg" alt="" />
+            <div>
+              <strong>{data?.userInfo.name}</strong>
+              <span>membro desde 2019</span>
+            </div>
+            <hr />
+          </HeaderInformation>
+          <InformationContent>
+            <InformationBox>
+              <PiBookOpenBold size={32} />
+              <div>
+                <strong>{!!pagesRead && pagesRead}</strong>
+                <span>Páginas lidas</span>
+              </div>
+            </InformationBox>
+            <InformationBox>
+              <PiBooks size={32} />
+              <div>
+                <strong>{!!ratedBooks && ratedBooks}</strong>
+                <span>Livros avaliados</span>
+              </div>
+            </InformationBox>
+            <InformationBox>
+              <PiUserListFill size={32} />
+              <div>
+                <strong>{!!countAuthor && countAuthor}</strong>
+                <span>Autores lidos</span>
+              </div>
+            </InformationBox>
+            <InformationBox>
+              <PiBookmarkSimpleBold size={32} />
+              <div>
+                <strong>
+                  {!!data?.moreReadCategory && data?.moreReadCategory.name}
+                </strong>
+                <span>Categoria mais lida</span>
+              </div>
+            </InformationBox>
+          </InformationContent>
+        </ProfileInformation>
+      </div>
     </ProfileContainer>
   )
 }
