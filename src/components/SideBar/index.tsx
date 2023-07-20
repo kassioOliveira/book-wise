@@ -10,8 +10,6 @@ import { useSession, signOut } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { Avatar } from '../Avatar'
 
-import UserSvg from '../../assets/user-icon.svg'
-
 export const SideBar = () => {
   const user = useSession()
 
@@ -31,7 +29,7 @@ export const SideBar = () => {
       router.push('/login')
     }
   }
-  console.log(data?.user.avatar_url)
+
   return (
     <Container>
       <Image src={Logo} width={128} height={32} alt="" />
@@ -69,11 +67,7 @@ export const SideBar = () => {
 
       <div>
         {isAuthenticated && (
-          <Avatar
-            src={data?.user.avatar_url ? data?.user.avatar_url : UserSvg}
-            alt="foto-perfil"
-            size="sm"
-          />
+          <Avatar src={data?.user.avatar_url} alt="foto-perfil" size="sm" />
         )}
         <span>{isAuthenticated ? `${data?.user.name}` : 'Fazer login'}</span>
         <ButtonAuthentication

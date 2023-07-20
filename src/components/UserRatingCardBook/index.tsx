@@ -42,7 +42,11 @@ export function UserRatingCardBook({ rating }: BookRating) {
         <CardHeader>
           <UserAvatarContainer>
             <Link href={'#'}>
-              <Avatar src={user?.avatar_url} alt="" size="md" />
+              <Avatar
+                src={user?.avatar_url ? user?.avatar_url : undefined}
+                alt=""
+                size="md"
+              />
             </Link>
             <div>
               <span>{user.name}</span>

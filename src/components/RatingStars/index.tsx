@@ -6,11 +6,14 @@ import { Star } from './Star'
 interface RatingStarsProps {
   rate: number
   justSee?: boolean
+  changeRate?: (newRate: number) => any
 }
 
-export function RatingStars({ rate, justSee }: RatingStarsProps) {
-  const handleChangeRate = (id: number) => {
-    console.log(id)
+export function RatingStars({ rate, justSee, changeRate }: RatingStarsProps) {
+  const handleChangeRate = (newRate: number) => {
+    if (changeRate) {
+      changeRate(newRate)
+    }
   }
   return (
     <StarContainer>

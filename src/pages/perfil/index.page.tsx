@@ -30,6 +30,7 @@ import {
   PiBookmarkSimpleBold,
 } from 'react-icons/pi'
 import { Avatar } from '@/components/Avatar'
+import { format } from 'date-fns'
 
 type UserInfo = User & {
   ratings: Rating[]
@@ -133,10 +134,24 @@ const ProfilePage: NextPageWithLayout = () => {
       <div>
         <ProfileInformation>
           <HeaderInformation>
-            <Avatar src={data?.userInfo.avatar_url} size="lg" alt="" />
+            <Avatar
+              src={
+                data?.userInfo.avatar_url
+                  ? data?.userInfo.avatar_url
+                  : undefined
+              }
+              size="lg"
+              alt=""
+            />
             <div>
-              <strong>{data?.userInfo.name}</strong>
-              <span>membro desde 2019</span>
+              <strong>{data && data?.userInfo.name}</strong>
+              <span>
+                {data &&
+                  format(
+                    new Date(data.userInfo.created_at),
+                    "'menbro desde' MM/dd/yyyy",
+                  )}
+              </span>
             </div>
             <hr />
           </HeaderInformation>

@@ -15,7 +15,7 @@ export function Star({ id, justSee, handleChangeRate, starType }: StarProps) {
       <FaStar
         style={{ color: '#8381D9', cursor: 'pointer' }}
         size={24}
-        onClick={() => handleChangeRate(id)}
+        onClick={() => handleChangeRate(id + 1)}
       />
     )
   }
@@ -27,7 +27,7 @@ export function Star({ id, justSee, handleChangeRate, starType }: StarProps) {
       <FaRegStar
         style={{ color: '#8381D9', cursor: 'pointer' }}
         size={24}
-        onClick={() => handleChangeRate(id)}
+        onClick={() => handleChangeRate(id + 1)}
       />
     )
   }
